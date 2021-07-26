@@ -1,11 +1,11 @@
-canvas=document.getElementById("canvas");
+canvas=document.getElementById("myCanvas");
 ctx=canvas.getContext("2d");
 car_x=0;
 car_y=0;
-car_width=70;
-car_height=70;
+car_width=100;
+car_height=140;
 background_image="parkingLot.jpg";
-car_image="concrete-road.png";
+car_image="car2.png";
 function add() {
 
     background_imgTag = new Image();
@@ -19,11 +19,11 @@ function add() {
 }
 
 function uploadBackground(){
-    ctx.drawImage(background_imgTag,0 ,0, canvas.width, canvas.height)
+    ctx.drawImage(background_imgTag,0 ,0, canvas.width, canvas.height);
 }
 
 function uploadcar(){
-    ctx.drawImage(car_imgTag,car_x, car_y, car_height)
+    ctx.drawImage(car_imgTag,car_x, car_y, car_width, car_height);
 }
 
 window.addEventListener("keydown", my_keydown);
